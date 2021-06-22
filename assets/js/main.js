@@ -398,4 +398,22 @@
 						$main._show(location.hash.substr(1), true);
 					});
 
+		//rotate bg img -- RT
+		var current = 1;
+
+		setInterval(rotateBgImg, 7000);
+		
+		function rotateBgImg(){
+			//how many images to rotate thru, defaults to img 1
+			var count = 4;
+			var body = document.querySelector('body');
+			body.classList.remove('bg-' + current);
+			current++;
+			if (current > count){
+				current = 1;
+			}
+			body.classList.add('bg-' + current);
+
+		}
+
 })(jQuery);
