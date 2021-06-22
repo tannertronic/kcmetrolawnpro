@@ -407,12 +407,12 @@
 			//how many images to rotate thru, defaults to img 1
 			var count = 4;
 			var body = document.querySelector('body');
-			body.classList.remove('bg-' + current);
+			var old = current;
 			current++;
 			if (current > count){
 				current = 1;
 			}
-			body.classList.add('bg-' + current);
+			body.classList.replace('bg-' + old, 'bg-' + current);
 
 		}
 
