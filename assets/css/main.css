@@ -1207,6 +1207,7 @@ body.bg-4 #bg:after {
   line-height: 5.5rem;
   border: solid 1px #ffffff;
   border-radius: 100%;
+  background: #fff;
 }
 #header .logo .icon:before {
   font-size: 2rem;
