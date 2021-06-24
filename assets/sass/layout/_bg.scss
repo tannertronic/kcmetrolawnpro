@@ -46,7 +46,7 @@
 				'transform #{_duration(article)} ease-in-out',
 				'filter #{_duration(article)} ease-in-out'
 			));
-			background-image:		url('../../images/lawn1.jpg');
+			background-image:		url('../../images/bg1.jpeg');
 			background-position:	center;
 			background-size:		cover;
 			background-repeat:		no-repeat;
@@ -69,12 +69,12 @@
 		}
 
 		body.bg-2 & {
-			&:after{background-image:url('../../images/lawn2.jpg')}
+			&:after{background-image:url('../../images/bg2.jpeg')}
 		}
 		body.bg-3 & {
-			&:after{background-image:url('../../images/lawn3.jpg')}
+			&:after{background-image:url('../../images/bg3.jpeg')}
 		}
 		body.bg-4 & {
-			&:after{background-image:url('../../images/lawn4.jpg')}
+			&:after{background-image:url('../../images/bg4.jpeg')}
 		}
 	}
