@@ -399,21 +399,35 @@
 					});
 
 		//rotate bg img -- RT
-		var current = 1;
+		let current = 1;
 
 		setInterval(rotateBgImg, 7000);
 		
 		function rotateBgImg(){
 			//how many images to rotate thru, defaults to img 1
-			var count = 4;
-			var body = document.querySelector('body');
-			var old = current;
+			let count = 4;
+			let body = document.querySelector('body');
+			let old = current;
 			current++;
 			if (current > count){
 				current = 1;
 			}
 			body.classList.replace('bg-' + old, 'bg-' + current);
 
+		}
+
+		//click handlers for expand/collapse -- RT
+		let els = document.querySelectorAll('.expand-wrapper');
+		for (let i = 0; i < els.length; i++){
+			els[i].querySelector('.expand-toggle').addEventListener('click', function(){
+				els[i].classList.toggle('open');
+				var content = els[i].querySelector('.expand-content');
+				if (content.style.maxHeight){
+					content.style.maxHeight = null;
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+				}
+			})
 		}
 
 })(jQuery);

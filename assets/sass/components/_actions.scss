@@ -99,3 +99,22 @@
 			}
 		}
 	}
+
+	.expand-wrapper{
+
+		.expand-toggle{
+			.collapse{display:none;}
+		}
+
+		.expand-content{max-height:0; overflow:hidden; transition:max-height 0.2s ease-out; padding-top:1em;}
+
+		&.open{
+
+			.expand-toggle{
+				.expand{display:none;}
+				.collapse{display:inline-block;}
+			}
+			
+			.expand-content{border-top:1px solid gray;}
+		}
+	}

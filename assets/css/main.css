@@ -145,7 +145,7 @@ a:hover {
 }
 
 strong, b {
-  color: #ffffff;
+  color: #000;
   font-weight: 600;
 }
 
@@ -580,11 +580,41 @@ input[type=radio] + label:before {
 }
 
 /* Image */
+.image-row {
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.image-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media screen and (max-width: 736px) {
+  .image-row {
+    display: block;
+  }
+}
+
 .image {
   border-radius: 4px;
   border: 0;
   display: inline-block;
   position: relative;
+}
+.image-row .image {
+  width: 48%;
+}
+@media screen and (max-width: 736px) {
+  .image-row .image {
+    width: 100%;
+  }
+}
+.image-row .image:before {
+  display: none;
+}
+.image-row .image img {
+  width: 100%;
 }
 .image:before {
   pointer-events: none;
@@ -791,6 +821,25 @@ ul.actions:not(.fixed) li button.icon:before,
 ul.actions:not(.fixed) li .button.icon:before {
     margin-left: -0.5em;
   }
+}
+
+.expand-wrapper .expand-toggle .collapse {
+  display: none;
+}
+.expand-wrapper .expand-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  padding-top: 1em;
+}
+.expand-wrapper.open .expand-toggle .expand {
+  display: none;
+}
+.expand-wrapper.open .expand-toggle .collapse {
+  display: inline-block;
+}
+.expand-wrapper.open .expand-content {
+  border-top: 1px solid gray;
 }
 
 /* Icons */
