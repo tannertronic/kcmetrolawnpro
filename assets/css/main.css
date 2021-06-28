@@ -217,6 +217,9 @@ h6 {
     font-size: 1.25em;
     line-height: 1.5;
   }
+  h2.expand-toggle {
+    font-size: 1.15em;
+  }
 }
 sub {
   font-size: 0.8rem;
