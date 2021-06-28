@@ -230,11 +230,21 @@ sup {
   top: -0.5rem;
 }
 
+figure {
+  padding-bottom: 2em;
+}
+figure figcaption {
+  font-weight: 700;
+}
+
 blockquote {
   border-left: solid 4px #ffffff;
   font-style: italic;
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
   padding: 0.5rem 0 0.5rem 2rem;
+}
+blockquote p {
+  margin: 0;
 }
 
 code {
